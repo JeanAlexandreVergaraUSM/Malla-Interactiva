@@ -91,14 +91,14 @@ header select {
 }
 
 /* COLORES POR ÁREA */
-.grid-item.area-integrativa       { background: #800080; }
-.grid-item.area-formacion-basica  { background: #FFA500; }
-.grid-item.area-electiva          { background: #FF69B4; }
-.grid-item.area-salud-animal      { background: #0000FF; }
-.grid-item.area-produccion-animal { background: #FFD700; color: #000; }
-.grid-item.area-medio-ambiente    { background: #00FFFF; }
-.grid-item.area-salud-publica     { background: #800080; }
-.grid-item.area-transversal       { background: #008000; }
+.grid-item.area-integrativa       { background: #b691d2; }
+.grid-item.area-formacion-basica  { background: #FA996C; }
+.grid-item.area-electiva          { background: #F3aacb; }
+.grid-item.area-salud-animal      { background: #486F99; }
+.grid-item.area-produccion-animal { background: #A5EEA0; color: #000; }
+.grid-item.area-medio-ambiente    { background: #88A7D0; }
+.grid-item.area-salud-publica     { background: #FF6961; }
+.grid-item.area-transversal       { background: #000000; }
 
 /* BLOQUEADO */
 .grid-item.bloqueado { opacity: 0.3; pointer-events: none; }
@@ -153,14 +153,14 @@ header select {
 
 
 /* aplica color según área */
-.grid-item .prereq-label.area-integrativa       { background: #800080; }
-.grid-item .prereq-label.area-formacion-basica  { background: #FFA500; }
-.grid-item .prereq-label.area-electiva          { background: #FF69B4; }
-.grid-item .prereq-label.area-salud-animal      { background: #0000FF; }
-.grid-item .prereq-label.area-produccion-animal { background: #FFD700; color: #000; }
-.grid-item .prereq-label.area-medio-ambiente    { background: #00FFFF; }
-.grid-item .prereq-label.area-salud-publica     { background: #800080; }
-.grid-item .prereq-label.area-transversal       { background: #008000; }
+.grid-item .prereq-label.area-integrativa       { background: #b691d2; }
+.grid-item .prereq-label.area-formacion-basica  { background: #FA996C; }
+.grid-item .prereq-label.area-electiva          { background: #F3aacb; }
+.grid-item .prereq-label.area-salud-animal      { background: #486F99; }
+.grid-item .prereq-label.area-produccion-animal { background: #A5EEA0; color: #000; }
+.grid-item .prereq-label.area-medio-ambiente    { background: #88A7D0; }
+.grid-item .prereq-label.area-salud-publica     { background: #FF6961; }
+.grid-item .prereq-label.area-transversal       { background: #000000; }
 
 /* Haz que cada grid-item use flexbox y centre su contenido */
 .grid-item {
@@ -265,10 +265,11 @@ header select {
   margin-right:4px;
   vertical-align:middle;
 }
-.legend-color.integrativa        { background:#800080; }
-.legend-color.salud-animal       { background:#0000FF; }
-.legend-color.produccion-animal  { background:#FFD700; }
-.legend-color.salud-publica      { background:#F44336; }
-.legend-color.medio-ambiente     { background:#00FFFF; }
-.legend-color.formacion-basica   { background:#FFA500; }
-.legend-color.electiva           { background:#FF69B4; }
+.legend-color.integrativa        { background: #b691d2; }
+.legend-color.salud-animal       { background: #486F99; }
+.legend-color.produccion-animal  { background:#A5EEA0; }
+.legend-color.salud-publica      { background: #FF6961; }
+.legend-color.medio-ambiente     { background: #88A7D0; }
+.legend-color.formacion-basica   { background: #FA996C; }
+.legend-color.electiva           { background: #F3aacb; }
+
