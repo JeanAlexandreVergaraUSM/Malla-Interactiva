@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Interactiva Veterinaria</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <select id="carrera-select">
+      <option value="" disabled selected>Elige tu carrera…</option>
+    </select>
+  </header>
+
+  <div class="grid-header">
+    <div class="year">Año 1</div><div class="year">Año 2</div>
+    <div class="year">Año 3</div><div class="year">Año 4</div>
+    <div class="year">Año 5</div>
+    <div class="sem">I</div><div class="sem">II</div><div class="sem">III</div>
+    <div class="sem">IV</div><div class="sem">V</div><div class="sem">VI</div>
+    <div class="sem">VII</div><div class="sem">VIII</div>
+    <div class="sem">IX</div><div class="sem">X</div>
+  </div>
+
+  <main>
+    <div class="malla-grid"></div>
+  </main>
+
+  <!-- INFO QUE APARECE AL ELEGIR CARRERA -->
+  <div id="info-below" style="display:none">
+    <div id="percentage" class="percentage-display"></div>
+    <div class="legend">
+      <span><span class="legend-color integrativa"></span>Formación Integrativa</span>
+      <span><span class="legend-color salud-animal"></span>Formación Salud Animal</span>
+      <span><span class="legend-color produccion-animal"></span>Formación Producción Animal</span>
+      <span><span class="legend-color salud-publica"></span>Formación Salud Pública</span>
+      <span><span class="legend-color medio-ambiente"></span>Formación Medio Ambiente</span>
+      <span><span class="legend-color formacion-basica"></span>Formación Básica</span>
+      <span><span class="legend-color electiva"></span>Formación Electiva</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

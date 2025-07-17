@@ -1,0 +1,274 @@
+/* SELECT */
+header {
+  padding: 16px;
+  background: #f5f5f5;
+  text-align: center;
+}
+header select {
+  font-size: 1rem;
+  padding: 4px 8px;
+}
+
+/* CABECERA */
+.grid-header {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.grid-header .year {
+  grid-row: 1;
+  padding: 8px 0;
+  background: #333;
+}
+.grid-header .year:nth-of-type(1) { grid-column: 1 / span 2; }
+.grid-header .year:nth-of-type(2) { grid-column: 3 / span 2; }
+.grid-header .year:nth-of-type(3) { grid-column: 5 / span 2; }
+.grid-header .year:nth-of-type(4) { grid-column: 7 / span 2; }
+.grid-header .year:nth-of-type(5) { grid-column: 9 / span 2; }
+.grid-header .sem {
+  grid-row: 2;
+  padding: 4px 0;
+  background: #444;
+}
+
+/* GRID DE ASIGNATURAS */
+.malla-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-flow: column;
+  grid-auto-rows: minmax(60px, auto);
+  gap: 8px;
+  padding: 16px;
+}
+
+/* CAJA DE ASIGNATURA */
+.grid-item {
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: visible;
+}
+
+/* Nombre centrado */
+.grid-item .course-name {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Etiqueta superior derecha: código */
+.grid-item .code-label {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px; height: 24px;
+  background: #fff; color: #000;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: bold;
+  z-index: 2;
+}
+
+/* Etiquetas inferior izquierda: prerrequisitos */
+.grid-item .prereq-label {
+  position: absolute;
+  bottom: 4px;
+  width: 20px; height: 20px;
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  z-index: 2;
+}
+
+/* COLORES POR ÁREA */
+.grid-item.area-integrativa       { background: #800080; }
+.grid-item.area-formacion-basica  { background: #FFA500; }
+.grid-item.area-electiva          { background: #FF69B4; }
+.grid-item.area-salud-animal      { background: #0000FF; }
+.grid-item.area-produccion-animal { background: #FFD700; color: #000; }
+.grid-item.area-medio-ambiente    { background: #00FFFF; }
+.grid-item.area-salud-publica     { background: #800080; }
+.grid-item.area-transversal       { background: #008000; }
+
+/* BLOQUEADO */
+.grid-item.bloqueado { opacity: 0.3; pointer-events: none; }
+/* APROBADO */
+.grid-item.aprobado  { opacity: 0.6; }
+
+/* Banda superior: negro sólido */
+.grid-item .top-bar {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 24px;
+  background: rgb(80, 78, 78);
+  z-index: 1;
+}
+
+/* Banda inferior: negro sólido */
+.grid-item .bottom-bar {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 24px;
+  background: rgb(80, 78, 78);
+  z-index: 1;
+}
+
+/* Reserva espacio para el nombre */
+.grid-item .course-name {
+  margin: 26px 4px 26px 4px;
+}
+
+/* Círculo de código sobre top-bar (permanece blanco) */
+.grid-item .code-label {
+  top: 2px;
+  right: 4px;
+}
+
+/* Prerrequisite circles dentro de bottom-bar:
+   Fondo por área, texto blanco */
+.grid-item .prereq-label {
+  position: absolute;
+  bottom: auto;
+  top: 2px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+/* (Los colores por área ya los tienes definidos) */
+
+
+/* aplica color según área */
+.grid-item .prereq-label.area-integrativa       { background: #800080; }
+.grid-item .prereq-label.area-formacion-basica  { background: #FFA500; }
+.grid-item .prereq-label.area-electiva          { background: #FF69B4; }
+.grid-item .prereq-label.area-salud-animal      { background: #0000FF; }
+.grid-item .prereq-label.area-produccion-animal { background: #FFD700; color: #000; }
+.grid-item .prereq-label.area-medio-ambiente    { background: #00FFFF; }
+.grid-item .prereq-label.area-salud-publica     { background: #800080; }
+.grid-item .prereq-label.area-transversal       { background: #008000; }
+
+/* Haz que cada grid-item use flexbox y centre su contenido */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra verticalmente */
+  align-items: center;      /* centra horizontalmente */
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: visible;
+}
+
+/* 1) Forzar filas de igual altura */
+.malla-grid {
+  /* en lugar de minmax(60px, auto) */
+  grid-auto-rows: 100px;        /* altura fija de 100px; ajusta a tu gusto */
+  gap: 6px;                     /* un poco menos de separación */
+  padding: 8px;                 /* menos padding para ganar espacio */
+}
+
+/* 2) Forzar cuadros uniformes */
+.grid-item {
+  height: 100%;                 /* ocupa toda la fila */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 3) Reducir un poco el tamaño del nombre para que quepa */
+.grid-item .course-name {
+  font-size: 1rem;           /* más pequeño */
+  padding: 4px;                 /* menos padding interno */
+  margin: 28px 2px 28px 2px;    /* deja espacio para bandas */
+}
+
+/* 4) Ajustar altura de bandas para no robar demasiado */
+.grid-item .top-bar,
+.grid-item .bottom-bar {
+  height: 20px;                 /* un poco más delgadas */
+}
+
+/* 5) Círculos también un poco más pequeños */
+.grid-item .code-label {
+  width: 20px; height: 20px;
+  font-size: 0.65rem;
+  top: 2px; right: 2px;
+}
+.grid-item .prereq-label {
+  width: 18px; height: 18px;
+  font-size: 0.6rem;
+  top: 1px;                     /* dentro de bottom-bar */
+}
+
+/* Diagonal roja al marcar aprobado */
+.grid-item.aprobado {
+  /* asegurarnos de que sea relativo para posicionar el ::after */
+  position: relative;
+}
+
+.grid-item.aprobado::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* crea una línea diagonal roja semi-transparente */
+  background-image: linear-gradient(
+    135deg,
+    transparent 48%,
+    rgba(255,0,0,0.8) 48%,
+    rgba(255,0,0,0.8) 52%,
+    transparent 52%
+  );
+  pointer-events: none;
+  z-index: 3; /* sobre todo el contenido */
+}
+
+/* Muestra el % centrado debajo de la malla */
+.percentage-display{
+  text-align:center;
+  color:#000000;
+  font-size:1.2rem;
+  margin:10px 0;
+}
+
+/* Leyenda */
+.legend {
+  text-align:center;
+  margin:8px 0;
+  font-size:0.9rem;
+  color:#000000;
+}
+.legend span {
+  display:inline-block;
+  margin:0 12px;
+}
+.legend-color {
+  display:inline-block;
+  width:12px; height:12px;
+  border-radius:50%;
+  margin-right:4px;
+  vertical-align:middle;
+}
+.legend-color.integrativa        { background:#800080; }
+.legend-color.salud-animal       { background:#0000FF; }
+.legend-color.produccion-animal  { background:#FFD700; }
+.legend-color.salud-publica      { background:#F44336; }
+.legend-color.medio-ambiente     { background:#00FFFF; }
+.legend-color.formacion-basica   { background:#FFA500; }
+.legend-color.electiva           { background:#FF69B4; }
