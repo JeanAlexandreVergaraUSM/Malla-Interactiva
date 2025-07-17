@@ -136,7 +136,7 @@ function actualizarDependencias() {
         .filter(item=>{
           const a = carrerasData['MEDVET']
             .find(x=>x.codigo===item.dataset.codigo);
-          return a && nivelMap[a.nivel] <= 4;
+          return a && nivelMap[a.nivel] <= 8;
         })
         .every(item=>item.classList.contains('aprobado'));
     } else {
