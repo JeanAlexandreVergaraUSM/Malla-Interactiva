@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,12 +9,15 @@
 </head>
 <body>
   <header>
-    <select id="carrera-select">
+    <select id="universidad-select">
+      <option value="" disabled selected>Elige tu universidad…</option>
+    </select>
+    <select id="carrera-select" disabled>
       <option value="" disabled selected>Elige tu carrera…</option>
     </select>
   </header>
 
-  <div class="grid-header">
+  <div class="grid-header" style="display:none">
     <div class="year">Año 1</div><div class="year">Año 2</div>
     <div class="year">Año 3</div><div class="year">Año 4</div>
     <div class="year">Año 5</div>
@@ -23,11 +27,10 @@
     <div class="sem">IX</div><div class="sem">X</div>
   </div>
 
-  <main>
+  <main style="display:none">
     <div class="malla-grid"></div>
   </main>
 
-  <!-- INFO QUE APARECE AL ELEGIR CARRERA -->
   <div id="info-below" style="display:none">
     <div id="percentage" class="percentage-display"></div>
     <div class="legend">
@@ -41,6 +44,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=1.1.1"></script>
+  <script src="app.js?v=1.1.2"></script>
 </body>
 </html>
