@@ -285,7 +285,7 @@ header select {
 
 /* —————— MÓVIL VERTICAL ≤400px —————— */
 @media (max-width: 400px) and (orientation: portrait) {
-.malla-wrapper {
+  .malla-wrapper {
     overflow-x: auto;
     width: 100%;
   }
@@ -346,6 +346,21 @@ header select {
     margin: 6px 0;
   }
 
+  /* ——— CENTRADO DE PORCENTAJE + LEYENDA ——— */
+  #info-below{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:280%;   /* se ajusta al ancho real de la malla */
+  margin:0 auto;       /* y se centra en la pantalla */
+}
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
   /* 5) Ajustes para los cuadros con texto-grande y texto-muy-grande */
   .grid-item.texto-grande .course-name {
     font-size: 0.7rem;  /* un poco más grande que el resto */
@@ -354,22 +369,20 @@ header select {
     font-size: 0.7rem;  /* aún más destacado */
     font-weight: bold;
   }
-
-.grid-item.texto-60 .course-name {
+  .grid-item.texto-60 .course-name {
     font-size: 0.6rem;  /* aún más destacado */
     font-weight: bold;
   }
-
   .grid-item.texto-43 .course-name {
     font-size: 0.7rem;  /* aún más destacado */
     font-weight: bold;
   }
-
   .grid-item.texto-29 .course-name {
     font-size: 0.7rem;  /* aún más destacado */
     font-weight: bold;
-  } 
+  }
 }
+
 
 /* —————— MÓVIL PEQUEÑO HORIZONTAL (≤480px height) —————— */
 @media (max-height: 400px) and (orientation: landscape) {
@@ -484,6 +497,22 @@ header select {
   }
   .legend {
     font-size: 0.85rem;
+    margin: 6px 0;
+  }
+
+  /* ——— CENTRADO DE PORCENTAJE + LEYENDA ——— */
+  #info-below{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:250%;   /* igual que arriba */
+  margin:0 auto;
+}
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   /* 6) Ajustes para clases especiales */
@@ -494,12 +523,12 @@ header select {
     font-size: 0.6rem;  /* aún más destacado */
     font-weight: bold;
   }
-
-.grid-item.texto-60 .course-name {
+  .grid-item.texto-60 .course-name {
     font-size: 0.6rem;  /* aún más destacado */
     font-weight: bold;
   }
 }
+
 
 /* —————— MÓVIL ESTÁNDAR HORIZONTAL (≤600px height) —————— */
 @media (min-height: 401px) and (max-height: 550px) and (orientation: landscape) {
@@ -839,3 +868,6 @@ header select {
     font-weight: bold;
   } 
 }
+
+
+
