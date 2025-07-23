@@ -1,4 +1,4 @@
-﻿N°;Nivel;Asignatura;Código Asignatura;Prerrequisito 01 (Código);Prerrequisito 02 (Código);Prerrequisito 03 (Código);Área
+N°;Nivel;Asignatura;Código Asignatura;Prerrequisito 01 (Código);Prerrequisito 02 (Código);Prerrequisito 03 (Código);Área
 1;I;Introducción a las Ciencias Veterinarias;1;Ingreso;;;area-integrativa
 2;I;Fundamentos de la Química;2;Ingreso;;;area-formacion-basica
 3;I;Biología Celular y Molecular;3;Ingreso;;;area-formacion-basica
@@ -27,7 +27,7 @@
 26;V;Genética en Ciencias Veterinarias;26;18;;;area-produccion-animal
 27;V;Epidemiología Veterinaria;27;24;;;area-salud-publica
 28;V;Fisiopatología Veterinaria;28;13;21;;area-salud-animal
-29;V;Gestión Ambiental y Desarrollo Sustent.;29;23;;;area-medio-ambiente
+29;V;Gestión Ambiental y Desarrollo Sustentable;29;23;;;area-medio-ambiente
 30;V;Gestión Contable y Financiera;30;18;;;area-formacion-basica
 31;V;Electivo 4;31;;;;area-electiva
 32;VI;Semiología veterinaria;32;20;28;;area-salud-animal
