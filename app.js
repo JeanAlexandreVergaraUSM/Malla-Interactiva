@@ -244,3 +244,4 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadCarreras();
   renderUniversidades();
 });
+
