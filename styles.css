@@ -363,6 +363,11 @@ header select {
     font-size: 0.5rem;  /* aún más destacado */
     font-weight: bold;
   }
+
+  .grid-item.texto-29 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
 }
 
 /* —————— MÓVIL PEQUEÑO HORIZONTAL (≤480px height) —————— */
