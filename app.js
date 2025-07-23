@@ -238,6 +238,7 @@ document.addEventListener('click', e => {
   it.classList.toggle('aprobado');
   actualizarDependencias();
   saveState();
+  updatePercentage(); 
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
