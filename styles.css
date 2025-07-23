@@ -273,3 +273,554 @@ header select {
 .legend-color.formacion-basica   { background: #FA996C; }
 .legend-color.electiva           { background: #F3aacb; }
 
+.grid-item.texto-grande .course-name {
+  font-size: 0.9rem;
+}
+
+.grid-item.texto-muy-grande .course-name {
+  font-size: 0.8rem;
+}
+
+/* —————— MÓVIL VERTICAL ≤480px —————— */
+@media (max-width: 550px) and (orientation: portrait) {
+  /* 1) Header en columna */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+  }
+  header select {
+    width: 100%;
+    margin: 4px 0;
+    font-size: 0.9rem;
+  }
+
+  /* 2) Grid con scroll horizontal */
+  .grid-header,
+  .malla-grid {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(10, 80px);
+    grid-auto-rows: 80px;
+    gap: 4px;
+    padding: 4px;
+    overflow-x: auto;
+  }
+
+  /* 3) Texto y círculos más compactos */
+  .grid-header .year {
+    font-size: 0.7rem;
+    padding: 4px 2px;
+  }
+  .grid-header .sem {
+    font-size: 0.65rem;
+    padding: 2px 0;
+  }
+  .grid-item .course-name {
+    font-size: 0.7rem;
+    padding: 2px;
+    margin: 16px 2px;
+  }
+  .grid-item .code-label {
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 14px;
+    height: 14px;
+    font-size: 0.5rem;
+    top: 1px;
+  }
+
+  /* 4) Info compacta */
+  .percentage-display {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+  .legend {
+    font-size: 0.8rem;
+    margin: 6px 0;
+  }
+
+  /* 5) Ajustes para los cuadros con texto-grande y texto-muy-grande */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.5rem;  /* un poco más grande que el resto */
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.4rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.4rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+  .grid-item.texto-43 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+}
+
+/* —————— MÓVIL PEQUEÑO HORIZONTAL (≤480px height) —————— */
+@media (max-height: 400px) and (orientation: landscape) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 0.8rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 0.75rem;
+  }
+  .grid-header .sem {
+    font-size: 0.7rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.58rem;
+    padding: 2px;    /* opcional, para que quepa mejor */
+    margin: 12px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 16px;
+    height: 16px;
+    font-size: 0.55rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 11px;
+    height: 14px;
+    font-size: 0.45rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 0.9rem;
+  }
+  .legend {
+    font-size: 0.75rem;
+  }
+
+  /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.6rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.6rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+}
+
+/* —————— MÓVIL ESTÁNDAR VERTICAL (≤600px width) —————— */
+@media (min-width: 551px) and (max-width: 600px) and (orientation: portrait) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 0.85rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 0.9rem;
+  }
+  .grid-header .sem {
+    font-size: 0.8rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.6rem;
+    padding: 4px;
+    margin: 20px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1.1rem;
+  }
+  .legend {
+    font-size: 0.85rem;
+  }
+
+  /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.6rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+}
+
+/* —————— MÓVIL ESTÁNDAR HORIZONTAL (≤600px height) —————— */
+@media (min-height: 401px) and (max-height: 550px) and (orientation: landscape) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 0.8rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 0.85rem;
+  }
+  .grid-header .sem {
+    font-size: 0.75rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.7rem;
+    padding: 3px;
+    margin: 14px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 16px;
+    height: 16px;
+    font-size: 0.5rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1rem;
+  }
+  .legend {
+    font-size: 0.8rem;
+  }
+
+   /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.7rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+}
+
+/* —————— TABLET PEQUEÑA VERTICAL (601px–768px width) —————— */
+@media (min-width: 601px) and (max-width: 830px) and (orientation: portrait) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 1rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 1rem;
+  }
+  .grid-header .sem {
+    font-size: 0.9rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.7rem;
+    padding: 6px;
+    margin: 24px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1.2rem;
+  }
+  .legend {
+    font-size: 0.9rem;
+  }
+
+   /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.6rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.5rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+  .grid-item.texto-10 .course-name {
+    font-size: 0.55rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+ .grid-item.texto-29 .course-name {
+    font-size: 0.62rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
+}
+
+/* —————— TABLET PEQUEÑA HORIZONTAL (601px–768px height) —————— */
+@media (min-height: 551px) and (max-height: 854px) and (orientation: landscape) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 1rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 0.9rem;
+  }
+  .grid-header .sem {
+    font-size: 0.85rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.85rem;
+    padding: 6px;
+    margin: 20px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1.1rem;
+  }
+  .legend {
+    font-size: 0.85rem;
+  }
+
+   /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.75rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.75rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.58rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+  .grid-item.texto-10 .course-name {
+    font-size: 0.75rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+ .grid-item.texto-29 .course-name {
+    font-size: 0.8rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
+
+ .grid-item.texto-43 .course-name {
+    font-size: 0.8rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
+}
+
+/* —————— TABLET ESTÁNDAR VERTICAL (769px–1024px width) —————— */
+@media (min-width: 831px) and (max-width: 1050px) and (orientation: portrait) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 1.05rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 1.1rem;
+  }
+  .grid-header .sem {
+    font-size: 0.95rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 28px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1.3rem;
+  }
+  .legend {
+    font-size: 1rem;
+  }
+
+  /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 1.15rem;
+  }
+  .grid-item.texto-muy-grande .course-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+   /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.75rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.75rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.58rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+}
+
+/* —————— TABLET ESTÁNDAR HORIZONTAL (769px–1024px height) —————— */
+@media (min-height: 855px) and (max-height: 1050px) and (orientation: landscape) {
+  /* 1) Letras del header */
+  header select {
+    font-size: 1.1rem;
+  }
+
+  /* 2) Texto cabecera años/semestres */
+  .grid-header .year {
+    font-size: 1.2rem;
+  }
+  .grid-header .sem {
+    font-size: 1rem;
+  }
+
+  /* 3) Nombre de asignatura dentro de cada cuadro */
+  .grid-item .course-name {
+    font-size: 1rem;
+    padding: 8px;
+    margin: 24px 2px;
+  }
+
+  /* 4) Círculos de código y prerrequisitos */
+  .grid-item .code-label {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    top: 2px; right: 2px;
+  }
+  .grid-item .prereq-label {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    top: 1px;
+  }
+
+  /* 5) Info (porcentaje y leyenda) */
+  .percentage-display {
+    font-size: 1.4rem;
+  }
+  .legend {
+    font-size: 1.1rem;
+  }
+
+   /* 6) Ajustes para clases especiales */
+  .grid-item.texto-grande .course-name {
+    font-size: 0.8rem;
+  }
+  .grid-item.texto-54 .course-name {
+    font-size: 0.75rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+.grid-item.texto-60 .course-name {
+    font-size: 0.7rem;  /* aún más destacado */
+    font-weight: bold;
+  }
+
+ .grid-item.texto-29 .course-name {
+    font-size: 0.8rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
+
+ .grid-item.texto-43 .course-name {
+    font-size: 0.85rem;  /* aún más destacado */
+    font-weight: bold;
+  } 
+}
+
+
+
